@@ -1,0 +1,75 @@
+2018-03-23 13:18:41.107  INFO 1240 --- [main] Application                    : Starting Application on DT-02758 with PID 1240 (C:\Users\alexander.dorow\IdeaProjects\QvRestServer\target\classes started by alexander.dorow in C:\Users\alexander.dorow\IdeaProjects\QvRestServer)
+2018-03-23 13:18:41.110 DEBUG 1240 --- [main] Application                    : Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+2018-03-23 13:18:41.111  INFO 1240 --- [main] Application                    : No active profile set, falling back to default profiles: default
+2018-03-23 13:18:41.157  INFO 1240 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@797badd3: startup date [Fri Mar 23 13:18:41 BRT 2018]; root of context hierarchy
+2018-03-23 13:18:44.414  INFO 1240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8099 (http)
+2018-03-23 13:18:44.465  INFO 1240 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-23 13:18:44.466  INFO 1240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-03-23 13:18:44.746  INFO 1240 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-23 13:18:44.908  INFO 1240 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-23 13:18:44.928  INFO 1240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-23 13:18:44.929  INFO 1240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-23 13:18:44.929  INFO 1240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-23 13:18:44.930  INFO 1240 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-23 13:18:47.025  INFO 1240 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-03-23 13:18:47.027  INFO 1240 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2018-03-23 13:18:48.212  INFO 1240 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-23 13:18:48.551  INFO 1240 --- [cluster-ClusterId{value='5ab528e7cb0d7304d8365cb8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongodb-driver-core-3.4.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_162]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_162]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_162]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_162]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_162]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_162]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_162]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_162]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_162]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongodb-driver-core-3.4.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.4.2.jar:na]
+	... 3 common frames omitted
+
+2018-03-23 13:18:48.776  INFO 1240 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8099 (http)
+2018-03-23 13:18:48.787  INFO 1240 --- [main] Application                    : Started Application in 8.325 seconds (JVM running for 9.083)
+2018-03-23 13:22:06.228  INFO 1240 --- [cluster-ClusterId{value='5ab528e7cb0d7304d8365cb8', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:19, serverValue:1}] to localhost:27017
+2018-03-23 13:22:06.231  INFO 1240 --- [cluster-ClusterId{value='5ab528e7cb0d7304d8365cb8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=819811}
+2018-03-23 13:22:06.232  INFO 1240 --- [cluster-ClusterId{value='5ab528e7cb0d7304d8365cb8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-03-23 13:22:13.259  INFO 3744 --- [main] Application                    : Starting Application on DT-02758 with PID 3744 (C:\Users\alexander.dorow\IdeaProjects\QvRestServer\target\classes started by alexander.dorow in C:\Users\alexander.dorow\IdeaProjects\QvRestServer)
+2018-03-23 13:22:13.267 DEBUG 3744 --- [main] Application                    : Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+2018-03-23 13:22:13.268  INFO 3744 --- [main] Application                    : No active profile set, falling back to default profiles: default
+2018-03-23 13:22:13.295  INFO 3744 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@797badd3: startup date [Fri Mar 23 13:22:13 BRT 2018]; root of context hierarchy
+2018-03-23 13:22:14.799  INFO 3744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8099 (http)
+2018-03-23 13:22:14.819  INFO 3744 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-23 13:22:14.821  INFO 3744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-03-23 13:22:15.074  INFO 3744 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-23 13:22:15.244  INFO 3744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-23 13:22:15.249  INFO 3744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-23 13:22:15.250  INFO 3744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-23 13:22:15.250  INFO 3744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-23 13:22:15.252  INFO 3744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-23 13:22:18.909  INFO 9860 --- [main] Application                    : Starting Application on DT-02758 with PID 9860 (C:\Users\alexander.dorow\IdeaProjects\QvRestServer\target\classes started by alexander.dorow in C:\Users\alexander.dorow\IdeaProjects\QvRestServer)
+2018-03-23 13:22:18.913 DEBUG 9860 --- [main] Application                    : Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+2018-03-23 13:22:18.913  INFO 9860 --- [main] Application                    : No active profile set, falling back to default profiles: default
+2018-03-23 13:22:18.939  INFO 9860 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@797badd3: startup date [Fri Mar 23 13:22:18 BRT 2018]; root of context hierarchy
+2018-03-23 13:22:20.365  INFO 9860 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8099 (http)
+2018-03-23 13:22:20.379  INFO 9860 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-03-23 13:22:20.380  INFO 9860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-03-23 13:22:20.480  INFO 9860 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-23 13:22:20.600  INFO 9860 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-23 13:22:20.605  INFO 9860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-23 13:22:20.605  INFO 9860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-23 13:22:20.606  INFO 9860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-23 13:22:20.609  INFO 9860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-23 13:22:21.327  INFO 9860 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-03-23 13:22:21.328  INFO 9860 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2018-03-23 13:22:21.375  INFO 9860 --- [cluster-ClusterId{value='5ab529bdcb0d7326840a8595', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2018-03-23 13:22:21.379  INFO 9860 --- [cluster-ClusterId{value='5ab529bdcb0d7326840a8595', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=597218}
+2018-03-23 13:22:21.380  INFO 9860 --- [cluster-ClusterId{value='5ab529bdcb0d7326840a8595', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-03-23 13:22:21.573  INFO 9860 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-23 13:22:21.619  INFO 9860 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8099 (http)
+2018-03-23 13:22:21.625  INFO 9860 --- [main] Application                    : Started Application in 3.025 seconds (JVM running for 3.469)
